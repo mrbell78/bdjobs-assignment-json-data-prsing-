@@ -1,13 +1,19 @@
 package com.nurhossen.bdjosbnurassignment.view;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.View;
+import android.view.ViewGroup;
 
 import com.nurhossen.bdjosbnurassignment.R;
 import com.nurhossen.bdjosbnurassignment.service.model.Datum;
@@ -17,10 +23,14 @@ import com.nurhossen.bdjosbnurassignment.viewmodel.MainActivityViewmodel;
 import java.util.ArrayList;
 import java.util.List;
 
+import eightbitlab.com.blurview.BlurView;
+import eightbitlab.com.blurview.RenderScriptBlur;
+
+
 import static android.content.ContentValues.TAG;
 
 public class MainActivity extends AppCompatActivity {
-
+    Toolbar toolbar;
     List<Datum> orgdata;
     MainActivityViewmodel viewmodel;
     BdjosbdataRepository data = new BdjosbdataRepository();
@@ -30,6 +40,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        toolbar=findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
 
         recyclerView=findViewById(R.id.recylerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -49,5 +64,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //Log.d(TAG, "onCreate: tAche data is "+ orgdata.get(1).getJobTitle());
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.toolbar_menu,menu);
+        return true;
     }
 }
