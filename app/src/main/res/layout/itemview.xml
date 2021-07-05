@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:elevation="3dp"
+        app:cardElevation="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        app:cardCornerRadius="5dp"
+        android:layout_marginRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="5dp"
+
+            >
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="#3089CC"
+                    android:layout_marginLeft="5dp"
+                    android:text="Job Title here"
+                    android:id="@+id/jobtitleid"
+                    />
+
+
+
+                <Button
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:text="Apply"
+                    android:textAllCaps="false"
+                    android:background="@drawable/custom_button"
+                    android:textSize="12sp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@android:color/white"
+                    android:id="@+id/btn_applyid"
+                    />
+
+            </RelativeLayout>
+
+
+            <!--body-->
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
+
+               <!--title section-->
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="5dp"
+                   android:gravity="center"
+                   >
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Company Name"
+                       android:textSize="15sp"
+                       android:textColor="#565656"
+                       android:id="@+id/companynameid"
+                       />
+
+                   <ImageView
+                       android:layout_width="60dp"
+                       android:layout_height="40dp"
+                       android:layout_marginLeft="50dp"
+                       android:id="@+id/img_logoid"
+                       android:scaleType="fitCenter"
+
+                       />
+
+
+               </LinearLayout>
+
+               <!--salary/expreance section-->
+
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+
+                   <!--deadline  section -->
+
+                   <LinearLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentRight="true"
+                       android:layout_marginRight="20dp"
+                       android:orientation="vertical">
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_alignParentRight="true"
+                           android:layout_marginRight="15dp"
+                           android:orientation="horizontal">
+                           <ImageView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:src="@drawable/ic_twotone_calendar"/>
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:textColor="#565656"
+                               android:textSize="15sp"
+                               android:layout_marginLeft="5dp"
+                               android:text="Deadline -"/>
+
+                       </LinearLayout>
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginLeft="8dp"
+                           android:id="@+id/deadlineid"
+                           android:textColor="#454545"
+                           android:text="17 july b2021"/>
+
+                   </LinearLayout>
+
+
+                   <LinearLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical">
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginLeft="5dp"
+                           android:orientation="horizontal">
+
+                           <TextView
+                               android:paddingTop="0dp"
+                               android:paddingLeft="3dp"
+                               android:textColor="#565656"
+                               android:textSize="15sp"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:text="Salary"/>
+
+                       </LinearLayout>
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:padding="3dp"
+                           android:layout_marginLeft="6dp"
+                           android:orientation="horizontal">
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+
+                               android:textSize="15sp"
+                               android:textColor="#454545"
+                               android:id="@+id/salaryid"
+                               android:text="10000 to 30000 TK"/>
+
+
+
+                       </LinearLayout>
+                   </LinearLayout>
+
+               </RelativeLayout>
+
+               <LinearLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginRight="10dp"
+                   android:layout_marginTop="5dp"
+                   android:layout_alignParentRight="true"
+                   android:orientation="vertical">
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:padding="3dp"
+                       android:orientation="horizontal">
+                       <ImageView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:src="@drawable/ic_work_"/>
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginLeft="5dp"
+                           android:textSize="15sp"
+                           android:textColor="#565656"
+                           android:text="Expreance   "/>
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="min 1 year expreance  required"
+                           android:textColor="#454545"
+                           android:textSize="15sp"
+                           android:id="@+id/minex"/>
+
+
+                   </LinearLayout>
+
+                 <!--  <LinearLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="5dp"
+
+                       android:orientation="horizontal">
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginLeft="5dp"
+                           android:textSize="15sp"
+                           android:textColor="#454545"
+                           android:text="min"/>
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginLeft="5dp"
+                           android:textSize="15sp"
+                           android:textColor="#454545"
+                           android:id="@+id/exmin"
+                           android:text="1 years"/>
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_marginLeft="20dp"
+                           android:orientation="horizontal">
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginLeft="5dp"
+                               android:textSize="15sp"
+                               android:textColor="#454545"
+
+                               android:text="max"/>
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginLeft="5dp"
+                               android:textSize="15sp"
+                               android:textColor="#454545"
+                               android:id="@+id/exmax"
+                               android:text="5 years"/>
+                       </LinearLayout>
+                   </LinearLayout>-->
+
+               </LinearLayout>
+
+               <RelativeLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="5dp">
+                   <!--apply instruction -->
+                   <LinearLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:padding="5dp"
+                       android:layout_marginLeft="5dp"
+                       android:orientation="vertical">
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textSize="15sp"
+                           android:textColor="#595959"
+                           android:text="Apply Instruction"/>
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_marginLeft="10dp"
+                           android:layout_marginTop="2dp"
+                           android:layout_height="wrap_content"
+                           android:orientation="vertical">
+                           <TextView
+                               android:layout_marginTop="3dp"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:textColor="#454545"
+                               android:textSize="14sp"
+                               android:text="Apply through any of following options"/>
+                           <LinearLayout
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+
+                               android:layout_marginTop="2dp"
+                               android:orientation="horizontal">
+
+                               <ImageView
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:src="@drawable/ic_keyboard_arrow"/>
+                               <TextView
+                                   android:layout_marginLeft="3dp"
+                                   android:textColor="#454545"
+                                   android:textSize="14sp"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:text="send your cv to "/>
+
+                               <TextView
+                                   android:textColor="#454545"
+                                   android:textSize="14sp"
+                                   android:id="@+id/emailid"
+                                   android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:text="nurhossen@gmail.com"/>
+
+                           </LinearLayout>
+
+                       </LinearLayout>
+
+                   </LinearLayout>
+
+
+
+               </RelativeLayout>
+
+
+
+
+           </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
